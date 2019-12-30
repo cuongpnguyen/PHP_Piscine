@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style type="text/css">
+        #balloon
+        {
+            background-color : red;
+            width: 200px;
+            height:200px;
+            border-radius:50%;
+        }
+        </style>
+            <script>
+                var colors = ['red', 'green', 'blue'];
+                var index = 0;
+                function change(balloon)
+                {
+                    width = balloon.offsetWidth;
+                    if (width > 420)
+                        defaultBalloon(balloon);
+                    else
+                    {
+                        inflate(balloon);
+                        changeColor(balloon);
+                    }
+                }
+                function inflate(balloon)
+                {
+                    width = balloon.offsetWidth;
+                    expandedWidth = (width + 10) + "px";
+                    balloon.style.width = expandedWidth;
+                    balloon.style.height = expandedWidth
+                }
+                function changeColor(balloon)
+                {
+                    index = (index + 1) % colors.length;
+                    balloon.style.backgroundColor = colors[index];
+                }
+                function changeColorBackwards(balloon)
+                {
+                    if (index == 0)
+                        index = 2;
+                    else
+                        index = (index - 1) % colors.length;
+                    balloon.style.backgroundColor = colors[index];
+                }
+                function defaultBalloon(balloon)
+                {
+                    balloon.style.width = "200px";
+                    balloon.style.height = "200px";
+                    balloon.style.backgroundColor = "red";
+                }
+                function shrink(balloon)
+                {
+                    width = balloon.offsetWidth;
+                    shrunkenWidth = Math.max(200, (width - 5)) + "px";
+                    balloon.style.width = shrunkenWidth;
+                    balloon.style.height = shrunkenWidth;
+                    changeColorBackwards(balloon);
+                }
+            </script>
+    </head>
+<BODY>
+    <div id="balloon" onmouseleave="shrink(this)" onclick="change(this)">
+    </div>
+</BODY>
+</html>

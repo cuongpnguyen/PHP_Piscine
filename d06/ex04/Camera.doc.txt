@@ -1,0 +1,21 @@
+
+<- Camera ----------------------------------------------------------------------
+The Camera class handles the camera POV of a Matrix.
+
+An instance can be constructed from an array with fields below:
+$cam  = new Camera( array( 'origin' => $vtxO,
+						'orientation' => $R,
+						'width' => 640,
+						'height' => 480,
+						'fov' => 60,
+						'near' => 1.0,
+						'far' => 100.0) );
+
+
+
+The class provides the following method that perform calculations :
+
+Vertex watchVertex( Vertex $worldVertex ) : Transforms "world" coordinates
+vertex into a "screen" coordinates vertex (a pixel basically).
+
+---------------------------------------------------------------------- Camera ->

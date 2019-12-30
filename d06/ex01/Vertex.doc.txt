@@ -1,0 +1,23 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles vertices.
+
+An instance can be constructed from an array of points:
+new Vertex (array('x' => 1, 'y' => '1', 'z' => 'z'));
+
+An optional w value can be added as well:
+$unitX = new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0);
+
+An optional color can be added as well: 
+$unitX = new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'color' => $green ) );
+
+The class provideds the following methods to get an retrieve values :
+
+get_x ();
+
+get_y ();
+
+get_z ();
+
+get_w ();
+---------------------------------------------------------------------- Vertex ->

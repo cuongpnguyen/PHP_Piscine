@@ -1,0 +1,22 @@
+
+<- Matrix ----------------------------------------------------------------------
+The Matrix class handles matrix which is a 3D representation on a 4x4 array. This implementation represents the 2D array as a 1D array.
+
+An instance can be constructed from an array with preset.
+$I = new Matrix( array( 'preset' => Matrix::IDENTITY ) );
+
+We can also pass in vertices and other parameters.
+
+The class provides the following method that perform calculations :
+
+float magnitude() : returns the vector’s length (or "norm").
+
+Vector normalize() : returns a normalized version of the vector. If the vector is
+already normalized, returns a fresh copy of the vector.
+
+Matrix mult( Matrix $rhs ) : returns the multiplication of both matrices.
+
+Vertex transformVertex( Vertex $vtx ) : returns a new vertex resulting from
+the transformation of the vertex by the matrix.
+
+---------------------------------------------------------------------- Matrix ->

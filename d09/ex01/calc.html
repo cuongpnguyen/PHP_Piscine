@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        .textbox
+        {
+            float:left;
+        }
+        </style>
+            <script>
+             const interval = setInterval(function() {
+             alert("Please, use me...");
+             }, 30000);
+                function readValues()
+                {
+                    var left_value = (document.getElementById("left_textbox")).value;
+                    var right_value = (document.getElementById("right_textbox")).value;
+                    var operator = (document.getElementById("operator")).value;
+                   if(check())
+                   {
+                        var left_number = parseInt(left_value);
+                        var right_number = parseInt(right_value);
+                        var result = calculate(operator, left_number, right_number);
+                        alert(result);
+                        console.log(result);
+                   }
+                }
+
+                function calculate(operator, left_number, right_number)
+                {
+                    if (operator == '+')
+                        return left_number + right_number;
+                    else if (operator == '-')
+                        return left_number - right_number;
+                    else if (operator == '*')
+                        return left_number * right_number;
+                    else if (operator == '/')
+                        return left_number / right_number;
+                    else if (operator == '%')
+                        return left_number % right_number;
+                }
+                function check()
+                {
+                    var left_value = (document.getElementById("left_textbox")).value;
+                    var right_value = (document.getElementById("right_textbox")).value;
+                    var operator = (document.getElementById("operator")).value;
+                    if (!left_value.trim().match(/^[0-9]+$/) || !right_value.trim().match(/^[0-9]+$/) )
+                    {
+                        alert( "Error :(");
+                        return (0);
+                    }
+                    if (left_value < 0 || right_value < 0)
+                    {
+                        alert("Error :(");
+                        return (0);
+                    }
+                    else if ((operator == '/' || operator == '%') && right_value == 0)
+                    {
+                        alert("It's over 9000!");
+                        return (0);
+                    }
+                    return (1);
+                }
+            </script>
+    </head>
+<BODY>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                        <input id="left_textbox" class="textbox" type="text" name="firstNumber"><br>
+                </td>
+                <td>
+                        <select id="operator">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                                <option value="%">%</option>
+                        </select>
+                </td>
+                <td>
+                        <input id="right_textbox" class="textbox" type="text" name="secondNumber"><br>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <form name="form" onsubmit="readValues()">
+    <input type="submit" value="Try me!">
+</form>
+</BODY>
+</html>
