@@ -1,0 +1,228 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    doft.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cnguyen <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/12/03 20:18:34 by cnguyen           #+#    #+#              #
+#    Updated: 2019/12/03 20:18:36 by cnguyen          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+body {
+	position: relative;
+	background-color: #505050;
+	min-width: 1890px;
+	min-height: 910px;
+}
+
+#top
+{
+	top:10px;
+	left: 235px;
+	position: fixed;
+	width:1420px;
+	height: 140px;
+	border: 10px;
+	background-color:#909090;  
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#left
+{
+	position: fixed;
+	top: 170px;
+	left: 275px;
+	width: 140px;
+	height: 425px;
+	background-color:#909090;  
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+}
+
+#center
+{
+	position: fixed;
+	top: 170px;
+	left: 445px;
+	width: 1020px;
+	height: 582px;
+	background-color:#909090;  
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+}
+
+#top_image
+{
+	position:fixed;
+	margin-top:10px;
+	margin-left:10px;
+	width: 464.86px;
+	height:120px
+}
+
+#loupe{
+	margin-left:1133.86px;
+	margin-top:10px;
+}
+
+#right
+{
+	position: fixed;
+	top: 170px;
+	left: 1495px;
+	width: 140px;
+	height: 425px;
+	background-color:#909090;  
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+}
+
+.icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 70px;
+	margin-top: 2px;
+  }
+
+#eye {
+	display: block;
+	height: 70px;
+	margin-top: 10px;
+	margin-left: auto;
+	border-style: solid;
+	margin-right: auto;
+	border-radius: 5px;
+	border-color: red;
+	border-width: 5px;
+  }
+  
+  #marginal {
+	  margin-top: 10px;
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+
+#main_image
+{
+	margin-left:10px;
+	margin-top:10px;
+	width:1000px;
+	height:562px;
+}
+    
+  #right_marginal {
+
+	margin-top: 10px;
+}
+
+  #book {
+	margin-left:37px;
+	width:70;
+	height:96.25;
+}
+
+#towel {
+	margin-left:40px;
+	width:70;
+	height:52.19;
+}
+
+.brick {
+	margin-left:10px;
+	width:120;
+	height:70;
+	background-image: url(resources/brick.jpg);
+	background-repeat: repeat;
+}
+
+.refresh
+{
+	width:20px;
+	height:20px;
+	margin-right:10px;
+	margin-top:5px;
+	float:right;
+}
+
+.x
+{
+	width:20px;
+	height:20px;
+	margin-top:115px;
+	position:fixed;
+	float:right;
+}
+
+
+.form {
+	width: 520px;
+	height: 170px;
+	border: 0px;
+	border-style: solid;
+	color: black;
+	background-color: #7afa77;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	display: block;
+	margin-left: 195px;
+	margin-top: 670px;
+	z-index: 10;
+	position: absolute;
+	font-family: sans-serif;
+	letter-spacing: 0.65px;
+	font-size: 17px;
+	text-align: left;
+	float:left;
+  
+  }
+  .form p {
+	display: inline;
+  }
+  .form h2 {
+	display: inline;
+	font-family: Georgia, serif;
+	font-size: 32px;
+	font-weight: lighter;
+  }
+  
+  .form h3 {
+	font-family: sans-serif;
+	letter-spacing: 0.65px;
+	font-size: 17px;
+	text-align: left;
+	text-shadow: 5px 5px 5px red;
+	display: inline;
+	font-weight: normal;
+  }
+  
+
+.form input[type=text] {
+	width: 380px;
+	height: 14px;
+	margin-left: 13px;
+	margin-top: 3px;
+	border: 2px solid;
+	border-bottom-color: #eeeeee;
+	border-right-color: #eeeeee;
+	border-left-color: #9d969d;
+	border-top-color: #9d969d;
+  }
+
+  .form input[type=submit] {
+	width: 80px;
+	height: 20px;
+	margin-left: 4px;
+	margin-bottom: 0;
+	border-radius: 1px;
+	text-align: center;
+	font-size: 13px;
+	letter-spacing: 0.25px;
+	background: linear-gradient(#f0f0f0, #dcdcdc);
+	border: solid #9d969d 1px;
+  }
